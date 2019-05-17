@@ -6,12 +6,12 @@
   <meta name="author">
   
   
-  <title>wxpay-ui | mton的小站</title>
+  <title>分享一些有用的前端网站（珍藏版） | mton的小站</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="开源项目,开源项目,">
+    <meta name="keywords" content="知识收集,知识收集 自编杂文,">
   
 
   
@@ -155,7 +155,7 @@
     </span>
     
       <span>
-        | <a href="/categories/开源项目/"><i class="fa fa-bookmark"></i>开源项目</a>
+        | <a href="/categories/知识收集/"><i class="fa fa-bookmark"></i>知识收集</a>
       </span>
     
     
@@ -165,18 +165,67 @@
     
   </div>
   <h1 class="passage-title">
-    wxpay-ui
+    分享一些有用的前端网站（珍藏版）
   </h1>
   <article class="passage-article">
     <blockquote>
-<p>去年底和鹅厂大佬合作的基于vue的WeUI(后因组织调整搁置)，具体源码可移步底部链接</p>
+<p>日常浏览各类网站，觉得不错就收藏下来，在这里分享出来</p>
 </blockquote>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍:"></a>介绍:</h3><p>A vue 2.0 UI components for web.</p>
-<h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install wxpay-ui</span><br></pre></td></tr></table></figure>
-<h3 id="全局引入："><a href="#全局引入：" class="headerlink" title="全局引入："></a>全局引入：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> wxpayUi <span class="keyword">from</span> <span class="string">'wxpay-ui'</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(wxpayUi);</span><br></pre></td></tr></table></figure>
-<h3 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--卡片组件--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Card</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--卡片title 内置弹窗组件 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">CardTitle</span> <span class="attr">title</span>=<span class="string">"标题"</span>  <span class="attr">popmessage</span>=<span class="string">"弹出消息"</span>&gt;</span><span class="tag">&lt;/<span class="name">CardTitle</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--卡片面板组件--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">CardPanel</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!---tab切换组件--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Tabs</span> <span class="attr">:type</span>=<span class="string">"type"</span> <span class="attr">name</span>=<span class="string">"areadistribute"</span> <span class="attr">:iupdatekey</span>=<span class="string">"updatekey"</span>  @<span class="attr">changeType</span>=<span class="string">"changeType"</span>/&gt;</span></span><br><span class="line">              <span class="comment">&lt;!--table组件--&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">iTable</span> <span class="attr">:header</span>=<span class="string">"header"</span> <span class="attr">:dataList</span>=<span class="string">"dataList"</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--自定义table列表内容--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">tr</span> <span class="attr">v-for</span>=<span class="string">"(item, index) in dataList"</span> @<span class="attr">click</span>=<span class="string">"goto_trends(item.key)"</span>&gt;</span></span><br><span class="line">                        ...</span><br><span class="line">                        <span class="tag">&lt;<span class="name">td</span> &gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;item.submchname&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"rankinglist_left"</span>&gt;</span>&#123;&#123;item.submchcode&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">iTable</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Paginator</span> <span class="attr">:totalPage</span>=<span class="string">"page_total"</span> <span class="attr">:icurrentPage</span>=<span class="string">"page_no"</span> @<span class="attr">changePage</span>=<span class="string">"changePage"</span>/&gt;</span> </span><br><span class="line">        <span class="tag">&lt;/<span class="name">CardPanel</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Card</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-<h3 id="源码地址"><a href="#源码地址" class="headerlink" title="源码地址"></a>源码地址</h3><p>====&gt;&gt;&gt; <a href="https://github.com/mtonhuang/wxpay-ui/tree/master" target="_blank" rel="noopener">点我</a></p>
+<h3 id="分享一些有用的前端网站（珍藏版）"><a href="#分享一些有用的前端网站（珍藏版）" class="headerlink" title="分享一些有用的前端网站（珍藏版）"></a>分享一些有用的前端网站（珍藏版）</h3><h4 id="面试类"><a href="#面试类" class="headerlink" title="面试类"></a>面试类</h4><ul>
+<li><p><a href="https://www.cnblogs.com/cangqinglang/p/8964448.html" target="_blank" rel="noopener">几道高级前端面试题解析</a></p>
+</li>
+<li><p><a href="https://www.devfeed.cn/new" target="_blank" rel="noopener">各大公司技术分享论坛</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/c70989bd5f29" target="_blank" rel="noopener">BAT大厂面试题</a></p>
+</li>
+<li><p><a href="https://www.nowcoder.com/ta/coding-interviews" target="_blank" rel="noopener">剑指offer</a></p>
+</li>
+<li><p><a href="https://blog.ihoey.com/posts/Interview/2018-02-28-alibaba-interview.html" target="_blank" rel="noopener">梦魇小栈的blog</a></p>
+</li>
+</ul>
+<h4 id="编码规则类"><a href="#编码规则类" class="headerlink" title="编码规则类"></a>编码规则类</h4><ul>
+<li><p><a href="https://www.zhihu.com/question/21935157" target="_blank" rel="noopener">如何看待 CSS 中 BEM 的命名方式</a></p>
+</li>
+<li><p><a href="https://standardjs.com/" target="_blank" rel="noopener">JavaScript Standard Style</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000013040555" target="_blank" rel="noopener">Airbnb JavaScript 编码风格指南</a></p>
+</li>
+</ul>
+<h4 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h4><ul>
+<li><p><a href="http://tool.oschina.net/" target="_blank" rel="noopener">好用的在线工具</a></p>
+</li>
+<li><p><a href="https://juejin.im/post/582bd0b4da2f600063d4f89e" target="_blank" rel="noopener">全面理解Git</a></p>
+</li>
+<li><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344" target="_blank" rel="noopener">解决冲突</a></p>
+</li>
+<li><p><a href="https://www.cnblogs.com/cangqinglang/p/8964460.html" target="_blank" rel="noopener">webpack4.0用之初体验</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/p358278505/article/details/74221214" target="_blank" rel="noopener">Visual Studio Code 常用快捷键</a></p>
+</li>
+<li><p><a href="https://juejin.im/post/5a08d1d6f265da430f31950e" target="_blank" rel="noopener">VSCode 插件配置</a></p>
+</li>
+<li><p><a href="https://www.fontke.com/tool/fontface/" target="_blank" rel="noopener">字体生成器</a></p>
+</li>
+<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">图片压缩TinyPNG</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/ganzhilin520/article/details/79047249" target="_blank" rel="noopener">hexo设置</a></p>
+</li>
+</ul>
+<h4 id="前端知识类"><a href="#前端知识类" class="headerlink" title="前端知识类"></a>前端知识类</h4><ul>
+<li><p><a href="https://blog.csdn.net/q1056843325/article/details/53147180" target="_blank" rel="noopener">常见HTTP状态码</a></p>
+</li>
+<li><p><a href="https://www.nodebeginner.org/index-zh-cn.html" target="_blank" rel="noopener">Node入门</a></p>
+</li>
+<li><p><a href="https://cnodejs.org/" target="_blank" rel="noopener">Node专业中文社区</a></p>
+</li>
+<li><p><a href="https://tech.meituan.com/2018/09/27/fe-security.html" target="_blank" rel="noopener">如何防止XSS攻击？</a></p>
+</li>
+<li><p><a href="如何防止CSRF攻击？">如何防止CSRF攻击？</a></p>
+</li>
+</ul>
+<h4 id="音乐类"><a href="#音乐类" class="headerlink" title="音乐类"></a>音乐类</h4><ul>
+<li><a href="https://noises.online/" target="_blank" rel="noopener">一个好听的白噪音网站</a></li>
+</ul>
 
   </article>
   <aside class="table-content" id="site-toc">
@@ -185,7 +234,7 @@
     <span>目录</span>
   </div>
   <div class="table-content-main">
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-text">介绍:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装："><span class="toc-text">安装：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全局引入："><span class="toc-text">全局引入：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用："><span class="toc-text">使用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发"><span class="toc-text">开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#源码地址"><span class="toc-text">源码地址</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#分享一些有用的前端网站（珍藏版）"><span class="toc-text">分享一些有用的前端网站（珍藏版）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#面试类"><span class="toc-text">面试类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编码规则类"><span class="toc-text">编码规则类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#工具类"><span class="toc-text">工具类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#前端知识类"><span class="toc-text">前端知识类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#音乐类"><span class="toc-text">音乐类</span></a></li></ol></li></ol>
   </div>
 </aside>
   
@@ -194,7 +243,7 @@
       
         <div>
           原文链接: 
-          <a href target="_blank">http://huangmiantong.cn/passages/wxpay-ui/</a>
+          <a href target="_blank">http://huangmiantong.cn/passages/前端各类知识网站（珍藏版）/</a>
         </div>
       
       <div>
@@ -205,7 +254,7 @@
   
     <div class="passage-tags">
      
-      <a href="/tags/开源项目/"><i class="fa fa-tags"></i>开源项目</a>
+      <a href="/tags/知识收集-自编杂文/"><i class="fa fa-tags"></i>知识收集 自编杂文</a>
     
     </div>
   
@@ -303,10 +352,10 @@
 
 <div class="bottom-bar">
   <div class="bottom-bar-left">
-    <!-- <a href="/passages/前端各类知识网站（珍藏版）/" data-enable="true">
+    <!-- <a href="javascript:void(0);" data-enable="false">
       <i class="fa fa-arrow-left"></i>
     </a>
-    <a href="/passages/omim-tag组件/" data-enable="true">
+    <a href="/passages/wxpay-ui/" data-enable="true">
       <i class="fa fa-arrow-right"></i>
     </a> -->
   </div>
