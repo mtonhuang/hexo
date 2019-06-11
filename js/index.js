@@ -4,7 +4,6 @@
     
     return {
       add: (cb) => {
-        debugger
         if(cbs.includes(cb)) {
           return false;
         }
