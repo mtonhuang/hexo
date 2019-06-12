@@ -54,21 +54,12 @@
 
   // load after DOM built
   const documentSrcs = [
-    '/js/copy.js',
-    '/js/layer.js',
-    '/js/scroll.js',
-    '/js/backTop.js',
-    '/js/time.js',
-    '/js/search.js',
-    '/js/passage.js'
+    '/js/documentSrc.js'
   ];
 
   // load after all srcs loaded
   const windowSrcs = [
-    // '/js/leancloud.js',
-    '/js/share.js',
-    '/js/reward.js',
-    '/js/mathjax.js'
+    '/js/windowSrc.js'
   ];
 
   const documentSrcScripts = documentSrcs.map(src => loadScript(src));
