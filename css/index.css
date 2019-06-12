@@ -131,6 +131,9 @@ main {
   max-width: 1024px;
   margin: 0 auto;
 }
+.site-comment-contanier[data-plateform="leancloud"] {
+  background: white;
+  padding-top: 30px; }
 @media screen and (max-width: 768px) {
   .site-comment-contanier {
     padding: 30px 20px 0;
