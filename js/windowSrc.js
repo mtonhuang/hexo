@@ -263,44 +263,44 @@
       });
     }
   
-    function showWelcome() {
-      const day = 60 * 60 * 24 * 1000;
-      const layer = document.querySelector('#site-layer'),
-        welcomeDOM = document.querySelector('#site-layer-welcome'),
-        title = document.querySelector('#site-layer-title');
+    // function showWelcome() {
+    //   const day = 60 * 60 * 24 * 1000;
+    //   const layer = document.querySelector('#site-layer'),
+    //     welcomeDOM = document.querySelector('#site-layer-welcome'),
+    //     title = document.querySelector('#site-layer-title');
     
-      let visitTime = parseInt(atob(window.localStorage.getItem('visit_time')), 10),
-        now = Date.now(),
-        offsetDays = 0;
+    //   let visitTime = parseInt(atob(window.localStorage.getItem('visit_time')), 10),
+    //     now = Date.now(),
+    //     offsetDays = 0;
       
-      window.localStorage.setItem('visit_time', btoa(now.toString()));
+    //   window.localStorage.setItem('visit_time', btoa(now.toString()));
     
-      if(layer.style.display !== 'none' || !totalVisit) {
-        return;
-      }
+    //   if(layer.style.display !== 'none' || !totalVisit) {
+    //     return;
+    //   }
   
-      offsetDays = Math.ceil((now - visitTime) / day);
+    //   offsetDays = Math.ceil((now - visitTime) / day);
     
-      if(isNaN(offsetDays)) {
-        layer.style.display = 'block';
-        title.innerHTML = '欢迎到来';
-        welcomeDOM.innerHTML = `您是本站的第${totalVisit}位访问者`;
-        welcomeDOM.style.display = 'flex';
-      } else if (offsetDays >= welcome.interval) {
-        layer.style.display = 'block';
-        title.innerHTML = '欢迎回来';
-        welcomeDOM.innerHTML = '您很久没来小站看看啦';
-        welcomeDOM.style.display = 'flex';
-      } else {
-        return;
-      }
+    //   if(isNaN(offsetDays)) {
+    //     layer.style.display = 'block';
+    //     title.innerHTML = '欢迎到来';
+    //     welcomeDOM.innerHTML = `您是本站的第${totalVisit}位访问者`;
+    //     welcomeDOM.style.display = 'flex';
+    //   } else if (offsetDays >= welcome.interval) {
+    //     layer.style.display = 'block';
+    //     title.innerHTML = '欢迎回来';
+    //     welcomeDOM.innerHTML = '您很久没来小站看看啦';
+    //     welcomeDOM.style.display = 'flex';
+    //   } else {
+    //     return;
+    //   }
     
-      window.AD_CONFIG.layer.add(() => {
-        title.innerHTML = '';
-        welcomeDOM.innerHTML = '';
-        welcomeDOM.style.display = 'none';
-      });
-    }
+    //   window.AD_CONFIG.layer.add(() => {
+    //     title.innerHTML = '';
+    //     welcomeDOM.innerHTML = '';
+    //     welcomeDOM.style.display = 'none';
+    //   });
+    // }
   
     if(!active()) {
       return;
@@ -314,7 +314,7 @@
       count().then(res => {
         document.querySelector('#site-count').innerHTML = res;
         totalVisit = res;
-        welcome.enable && showWelcome();
+        // welcome.enable && showWelcome();
       });
       log();
     }
