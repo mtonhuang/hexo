@@ -9,4 +9,4 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Sitemap: https://huangmiantong.cn/sitemap.xmlSitemap: https://huangmiantong.cn/baidusitemap.xml
+Sitemap: https://www.huangmiantong.cn/sitemap.xmlSitemap: https://www.huangmiantong.cn/baidusitemap.xml
