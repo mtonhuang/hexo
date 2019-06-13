@@ -4,10 +4,10 @@ Allow: /tag/
 Allow: /categories/
 Allow: /about/
 Allow: /friends/
-Allow: /_posts/
 Disallow: /vendors/
 Disallow: /js/
 Disallow: /css/
+Disallow: /styles/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
