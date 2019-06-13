@@ -1,9 +1,11 @@
 User-agent: *
 Allow: /
-Allow: /tag/
-Allow: /categories/
 Allow: /about/
+Allow: /archives/
+Allow: /categories/
 Allow: /friends/
+Allow: /passages/
+Allow: /tags/
 Disallow: /vendors/
 Disallow: /js/
 Disallow: /css/
