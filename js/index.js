@@ -1,1 +1,75 @@
-"use strict";!function(){var t;window.AD_CONFIG.layer=(t=[],{add:function(n){return!t.includes(n)&&(t.push(n),!0)},remove:function(n){var r=t.indexOf(n);return-1!==r&&(t.splice(r,1),!0)},trigger:function(){t.forEach(function(n){return n()}),t=[]}});var r=function(n){var e=!1;return function(){return new Promise(function(r){if(e)return r();e=!0;var t=document.createElement("script");t.src=n,t.type="text/javascript",t.async="async",t.onerror=function(n){t.remove(),r(e=!1)},t.onload=function(){r(!0)},document.body.appendChild(t)})}},n=["/js/documentSrc.js"].map(function(n){return r(n)}),e=["/js/windowSrc.js"].map(function(n){return r(n)});document.addEventListener("DOMContentLoaded",function(){n.forEach(function(n){return n()})}),window.addEventListener("load",function(){e.forEach(function(n){return n()})})}();
+(() => {
+  window.AD_CONFIG.layer = (() => {
+    let cbs = [];
+    
+    return {
+      add: (cb) => {
+        if(cbs.includes(cb)) {
+          return false;
+        }
+        cbs.push(cb);
+        return true;
+      },
+      remove: (cb) => {
+        let index = cbs.indexOf(cb);
+        if(index === -1) {
+          return false;
+        }
+        cbs.splice(index, 1);
+        return true;
+      },
+      // trigger before layer to be closed
+      trigger: () => {
+        cbs.forEach(cb => cb());
+        cbs = [];
+      }
+    }
+  })();
+
+  const loadScript = (src) => {
+    let exists = false;
+  
+    return () => new Promise((resolve) => {
+      if(exists) return resolve();
+      // 防止没有触发下方的onload时候, 又调用此函数重复加载
+      exists = true;
+      // 开始加载
+      let script = document.createElement('script');
+      script.src = src;
+      script.type = 'text/javascript';
+      script.async = 'async';
+      script.onerror = (ev) => {
+        // 加载失败: 允许外部再次加载
+        script.remove();
+        exists = false;
+        resolve(false);
+      };
+      script.onload = () => {
+        // 加载成功: exists一直为true, 不会多次加载
+        resolve(true);
+      };
+      document.body.appendChild(script);
+    });
+  };
+
+  // load after DOM built
+  const documentSrcs = [
+    '/js/documentSrc.js'
+  ];
+
+  // load after all srcs loaded
+  const windowSrcs = [
+    '/js/windowSrc.js'
+  ];
+
+  const documentSrcScripts = documentSrcs.map(src => loadScript(src));
+  const windowSrcScripts = windowSrcs.map(src => loadScript(src));
+
+  document.addEventListener('DOMContentLoaded', () => {
+    documentSrcScripts.forEach(script => script());
+  });
+
+  window.addEventListener('load', () => {
+    windowSrcScripts.forEach(script => script());
+  });
+})();
