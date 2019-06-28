@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huangmiantong.cn/friends/index.html</loc>
+    
+    <lastmod>2019-06-28T02:42:50.675Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huangmiantong.cn/passages/leancloud%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2019-06-25T13:22:49.846Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>https://huangmiantong.cn/about/index.html</loc>
     
     <lastmod>2019-03-19T02:19:07.743Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huangmiantong.cn/friends/index.html</loc>
-    
-    <lastmod>2019-03-18T12:17:07.922Z</lastmod>
     
   </url>
   
