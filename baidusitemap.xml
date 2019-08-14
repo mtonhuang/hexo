@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://huangmiantong.cn/passages/%E4%BF%AE%E6%94%B9vscode%E8%83%8C%E6%99%AF%E5%9B%BE/</loc>
-    <lastmod>2019-07-31</lastmod>
+    <loc>http://huangmiantong.cn/passages/wechatApp-template/</loc>
+    <lastmod>2019-08-14</lastmod>
   </url>  <url>
-    <loc>http://huangmiantong.cn/passages/%E5%9F%BA%E4%BA%8Ewebpack%E7%9A%84weui%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>http://huangmiantong.cn/passages/refactor-boilerplate/</loc>
+    <lastmod>2019-08-14</lastmod>
+  </url>  <url>
+    <loc>http://huangmiantong.cn/passages/%E4%BF%AE%E6%94%B9vscode%E8%83%8C%E6%99%AF%E5%9B%BE/</loc>
     <lastmod>2019-07-31</lastmod>
   </url>  <url>
     <loc>http://huangmiantong.cn/passages/antd-of-Vue-%E4%B9%8Btable%E7%BB%84%E4%BB%B6%E8%B8%A9%E5%9D%91%E8%AE%B0/</loc>

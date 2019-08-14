@@ -1,4 +1,5 @@
-http://huangmiantong.cn/passages/基于webpack的weui模板/
+http://huangmiantong.cn/passages/wechatApp-template/
+http://huangmiantong.cn/passages/refactor-boilerplate/
 http://huangmiantong.cn/passages/antd-of-Vue-之table组件踩坑记/
 http://huangmiantong.cn/passages/leancloud问题/
 http://huangmiantong.cn/passages/修改vscode背景图/
@@ -7,4 +8,3 @@ http://huangmiantong.cn/passages/omim-tag组件/
 http://huangmiantong.cn/passages/wxpay-ui/
 http://huangmiantong.cn/passages/h5拖拽/
 http://huangmiantong.cn/passages/react基础理论图/
-http://huangmiantong.cn/passages/h5开发坑点总结/
