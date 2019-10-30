@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://huangmiantong.cn/passages/wxpay-ui/</loc>
+    
+    <lastmod>2019-10-30T07:21:45.585Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://huangmiantong.cn/about/index.html</loc>
     
-    <lastmod>2019-10-30T07:13:20.066Z</lastmod>
+    <lastmod>2019-10-30T07:20:40.187Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://huangmiantong.cn/passages/omim-tag%E7%BB%84%E4%BB%B6/</loc>
+    
+    <lastmod>2019-10-30T07:20:36.077Z</lastmod>
     
   </url>
   
@@ -72,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://huangmiantong.cn/passages/omim-tag%E7%BB%84%E4%BB%B6/</loc>
-    
-    <lastmod>2019-06-18T04:04:18.933Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://huangmiantong.cn/passages/Eslint%E6%8E%A8%E8%8D%90%E7%9A%84rules/</loc>
     
     <lastmod>2019-06-18T04:03:16.539Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>http://huangmiantong.cn/passages/h5%E6%8B%96%E6%8B%BD/</loc>
     
     <lastmod>2019-06-18T03:59:43.190Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://huangmiantong.cn/passages/wxpay-ui/</loc>
-    
-    <lastmod>2019-06-18T03:57:52.621Z</lastmod>
     
   </url>
   
