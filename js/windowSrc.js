@@ -256,7 +256,7 @@
           .then(
             res => resolve(res + 1), 
             error => {
-              void 0;
+              console.log('Error occurs when count in leancloud.js:', error.message);
               resolve(0);
             }
           );

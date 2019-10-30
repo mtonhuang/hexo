@@ -1,1 +1,282 @@
-"use strict";var _slicedToArray=function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],o=!0,r=!1,i=void 0;try{for(var c,l=e[Symbol.iterator]();!(o=(c=l.next()).done)&&(n.push(c.value),!t||n.length!==t);o=!0);}catch(e){r=!0,i=e}finally{try{!o&&l.return&&l.return()}finally{if(r)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")};!function(){var i=window.AD_CONFIG.author;document.addEventListener("copy",function(e){var t=e.clipboardData||window.clipboardData;if(t){e.preventDefault();var n=window.getSelection().toString(),o=n+"\n\n"+(i?"作者: "+i+"\n":"")+"链接: "+window.location.href+"\n来源: "+window.location.host+"\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n\n",r=n+"<br/><br/>"+(i?"<b>作者</b>: "+i+"<br/>":"")+'<b>链接</b>: <a href="'+window.location.href+'">'+window.location.href+'</a><br/><b>来源</b>: <a href="'+window.location.origin+'">'+window.location.host+"</a><br/>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br/>";t.setData("text/html",r),t.setData("text/plain",o)}})}(),function(){var t=document.querySelector("#site-layer"),n=window.AD_CONFIG.layer;t.addEventListener("click",function(e){(e.target.matches("#site-layer-close")||e.target.matches("#site-layer"))&&(n.trigger(),t.style.display="none")})}(),function(){var i,c,l=document.querySelector("#back-top-btn"),e=(i=document.querySelector("#site-process"),c=!1,function(){c||(c=!0,window.requestAnimationFrame(function(e){var t=document.documentElement.scrollTop||document.body.scrollTop,n=document.documentElement.scrollHeight||document.body.scrollHeight,o=document.documentElement.clientHeight||document.body.clientHeight;c=!1;var r=100*t/(n-o);99<r?r=100:r<1&&(r=0),i.style.width=r+"%",l.style.display=0==r?"none":"block"}))});e(),document.addEventListener("scroll",e,!1)}(),function(){var o,r=document.querySelector("#back-top-btn");r.addEventListener("click",(o=!1,function(){if(!o){o=!0;var e=document.documentElement.scrollTop||document.body.scrollTop;if(e<=10)return document.documentElement.scrollTop=0,document.body.scrollTop=0,void(o=!1);var t=Math.ceil(10*e/200),n=setInterval(function(){(e=document.documentElement.scrollTop||document.body.scrollTop)<=t?(document.documentElement.scrollTop=0,document.body.scrollTop=0,o=!1,clearInterval(n),r.classList="",r.querySelector("span").innerText="Top"):(document.documentElement.scrollTop=e-t,document.body.scrollTop=e-t,r.classList.add("rocketMove"))},10)}}),!1)}(),function(){var e=window.AD_CONFIG.start_time.split("-"),t=_slicedToArray(e,3),n=t[0],o=t[1],r=t[2],i={year:parseInt(n,10),month:parseInt(o,10),day:parseInt(r,10)};isNaN(i.year)&&(i.year=2018),isNaN(i.month)&&(i.month=2),isNaN(i.day)&&(i.day=10);var c=function(){var e=0<arguments.length&&void 0!==arguments[0]?arguments[0]:"",t=1<arguments.length&&void 0!==arguments[1]?arguments[1]:{},i=document.querySelector(e),c=new Date(t.year,t.month-1,t.day).getTime();return function(){var e=parseInt(((new Date).getTime()-c)/1e3,10),t=Math.floor(e/86400),n=Math.floor(e%86400/3600),o=Math.floor(e%86400%3600/60),r=Math.floor(e%86400%3600%60);i.innerHTML=t+"天"+n+"时"+o+"分"+r+"秒"}}("#site-time",i);c(),setInterval(c,1e3)}(),function(){function o(e){var t="https://www.google.com/search?q="+(e="site:"+window.location.hostname+" "+decodeURIComponent(e));window.open(t)}var e=document.querySelector("#site-search"),t=document.querySelector("#site-nav"),n=document.querySelector("#site-nav-btn"),r=document.querySelector("#site-layer"),i=r.querySelector(".site-layer-content"),c=document.querySelector("#site-layer-title"),l=document.querySelector("#site-layer-search"),a=l.querySelector("input"),d=l.querySelector("i");e.addEventListener("click",function(e){r.style.display="block",l.style.display="flex",a.focus(),c.innerHTML="搜索",window.AD_CONFIG.layer.add(function(){c.innerHTML="",a.blur(),l.style.display="none"})}),a.addEventListener("keypress",function(e){var t=e.which||e.keyCode,n=a.value.trim();13===t&&0<n.length&&o(n)}),d.addEventListener("click",function(e){a.focus();var t=a.value.trim();0<t.length&&o(t)}),n.addEventListener("click",function(e){e.preventDefault(),e.stopPropagation(),r.style.display="block",i.style.display="none",t.style.right="0",window.AD_CONFIG.layer.add(function(){t.style.right="",r.style.display="none",i.style.display=""})})}(),function(){function t(e){window.open(e.target.getAttribute("src"),"_blank")}var e=window.AD_CONFIG,n=e.is_post,o=e.page_type;if(document.querySelectorAll(".passage-article").forEach(function(e){return e.querySelectorAll("img").forEach(function(e){return e.addEventListener("click",t)})}),n||!1!==["about","friends"].includes(o)){var r=document.querySelector("#site-layer"),i=r.querySelector(".site-layer-content"),c=document.querySelector("#site-toc"),l=document.querySelector("#site-toc-show-btn"),a=document.querySelector("#site-toc-hide-btn");l&&l.addEventListener("click",function(e){e.preventDefault(),e.stopPropagation(),r.style.display="block",i.style.display="none",c.style.right="0",window.AD_CONFIG.layer.add(function(){c.style.right="",r.style.display="none",i.style.display=""})}),a&&a.addEventListener("click",window.AD_CONFIG.layer.trigger)}}();
+// copy
+(() => {
+    const { author } = window.AD_CONFIG;
+  
+    document.addEventListener('copy', e => {
+      let clipboardData = e.clipboardData || window.clipboardData;
+      if(!clipboardData) {
+        return;
+      }
+  
+      e.preventDefault();
+      
+      const selection = window.getSelection().toString();
+  
+      const textData = selection + '\n\n'
+        + (author ? `作者: ${author}\n` : '')
+        + '链接: ' + window.location.href + '\n'
+        + '来源: ' + window.location.host + '\n'
+        + '著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n\n';
+  
+      const htmlData = selection + '<br/><br/>'
+        + (author ? `<b>作者</b>: ${author}<br/>` : '')
+        + `<b>链接</b>: <a href="${window.location.href}">${window.location.href}</a><br/>`
+        + `<b>来源</b>: <a href="${window.location.origin}">${window.location.host}</a><br/>`
+        + '著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br/>';
+  
+        clipboardData.setData('text/html', htmlData);
+        clipboardData.setData('text/plain', textData);
+    });
+  })();
+
+// layer
+  (() => {
+    const layerDOM = document.querySelector('#site-layer');
+    const { layer } = window.AD_CONFIG;
+  
+    layerDOM.addEventListener('click', (e) => {
+      if(!e.target.matches('#site-layer-close') && !e.target.matches('#site-layer')) {
+        return;
+      }
+  
+      layer.trigger();
+      layerDOM.style.display = 'none';
+    });
+  })();
+
+//   scroll
+  (() => {
+    const backTopBtn = document.querySelector('#back-top-btn');
+    const handleScoll = (() => {
+      const process = document.querySelector('#site-process');
+      let isRunning = false;
+      
+      return () => {
+        if (isRunning) return;
+        isRunning = true;
+  
+        window.requestAnimationFrame(ts => {
+          let scrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+            scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight,
+            clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+  
+          isRunning = false;
+  
+          let percent = 100 * scrollTop / (scrollHeight - clientHeight);
+          if(percent > 99) {
+            percent = 100;
+          } else if (percent < 1) {
+            percent = 0;
+          }
+  
+          process.style.width = `${percent}%`;
+
+          if(percent == 0) {
+              backTopBtn.style.display = 'none'
+          }else {
+            backTopBtn.style.display = 'block'
+          }
+        });
+      };
+    })();
+  
+    // Refresh Page
+    handleScoll();
+  
+    document.addEventListener('scroll', handleScoll, false);
+  })();
+
+//   backTop
+  (() => {
+    const backTopBtn = document.querySelector('#back-top-btn');
+    // 滚动回到顶部
+    const backTop = () => {
+      const delay = 10, 
+        time = 200;
+      let running = false;
+  
+      return () => {
+        if(running) return;
+        running = true;
+  
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    
+        if(scrollTop <= 10) {
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+          running = false;
+          return;
+        }
+    
+        let step = Math.ceil(scrollTop * delay / time);
+    
+        let timer = setInterval(() => {
+          scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+          if(scrollTop <= step) {
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            running = false;
+            clearInterval(timer);
+            // 火箭移动
+            backTopBtn.classList = '';
+            //文字改变
+            backTopBtn.querySelector('span').innerText = 'Top'
+          } else {
+            document.documentElement.scrollTop = scrollTop - step;
+            document.body.scrollTop = scrollTop - step; 
+            // 火箭移动
+            backTopBtn.classList.add("rocketMove");
+            //文字改变
+          }
+        }, delay);
+      };
+    };
+    
+    backTopBtn.addEventListener('click', backTop(), false);
+    
+  })();
+
+//   time
+  (() => {
+    function update(id = '', start = {}) {
+      const dom = document.querySelector(id);
+      const ts = new Date(start.year, start.month - 1, start.day).getTime();
+  
+      return () => {
+        let offset = parseInt((new Date().getTime() - ts) / 1000, 10),
+          day = Math.floor(offset / 86400),
+          hour = Math.floor((offset % 86400) / 3600),
+          minute = Math.floor(((offset % 86400) % 3600) / 60),
+          second = Math.floor(((offset % 86400) % 3600) % 60);
+  
+        dom.innerHTML = day + "天" + hour + "时" + minute + "分" + second + "秒";
+      };
+    }
+  
+    const { start_time } = window.AD_CONFIG;
+    const [startYear, startMonth, startDay] = start_time.split('-');
+    const startTime = {
+      year: parseInt(startYear, 10),
+      month: parseInt(startMonth, 10),
+      day: parseInt(startDay, 10)
+    };
+  
+    isNaN(startTime.year) && (startTime.year = 2018);
+    isNaN(startTime.month) && (startTime.month = 2);
+    isNaN(startTime.day) && (startTime.day = 10);
+  
+    const timeUpdate = update('#site-time', startTime);
+    timeUpdate();
+    setInterval(timeUpdate, 1000);
+  })();
+
+//   search
+  (() => {
+    function openGoogle(keywords) {
+      keywords = `site:${window.location.hostname} ${decodeURIComponent(keywords)}`;
+      let href = `https://www.google.com/search?q=${keywords}`;
+      window.open(href);
+    }
+  
+    const searchBtn = document.querySelector('#site-search'),
+      nav = document.querySelector('#site-nav'),
+      navBtn = document.querySelector('#site-nav-btn'),
+      layer = document.querySelector('#site-layer'),
+      layerContent = layer.querySelector('.site-layer-content'),
+      title = document.querySelector('#site-layer-title'),
+      searchDOM = document.querySelector('#site-layer-search');
+  
+    const inputDOM = searchDOM.querySelector('input'),
+      iconDOM = searchDOM.querySelector('i');
+  
+    searchBtn.addEventListener('click', (e) => {
+      layer.style.display = 'block';
+      searchDOM.style.display = 'flex';
+      inputDOM.focus();
+      title.innerHTML = '搜索';
+  
+      window.AD_CONFIG.layer.add(() => {
+        title.innerHTML = '';
+        inputDOM.blur();
+        searchDOM.style.display = 'none';
+      });
+    });
+  
+    inputDOM.addEventListener('keypress', (e) => {
+      let key = e.which || e.keyCode,
+        value = inputDOM.value.trim();
+  
+      if(key === 13 && value.length > 0) {
+        openGoogle(value);
+      }
+    });
+  
+    iconDOM.addEventListener('click', (e) => {
+      inputDOM.focus();
+      let value = inputDOM.value.trim();
+      if(value.length > 0) {
+        openGoogle(value);
+      }
+    });
+  
+    navBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      layer.style.display = 'block';
+      layerContent.style.display = 'none';
+      nav.style.right = '0';
+  
+      window.AD_CONFIG.layer.add(() => {
+        nav.style.right = '';
+        layer.style.display = 'none';
+        layerContent.style.display = '';
+      });
+    });
+    
+  })();
+
+//   passage
+  (() => {
+    function handleImgClick(event) {
+      window.open(event.target.getAttribute('src'), '_blank');
+    }
+  
+    const { is_post, page_type } = window.AD_CONFIG;
+  
+    document
+      .querySelectorAll('.passage-article')
+      .forEach(
+        passage => 
+          passage
+            .querySelectorAll('img')
+            .forEach(image => image.addEventListener('click', handleImgClick))
+      );
+  
+    if(!is_post && ['about', 'friends'].includes(page_type) === false) {
+      return;
+    }
+  
+    const layer = document.querySelector('#site-layer'),
+      layerContent = layer.querySelector('.site-layer-content'),
+      toc = document.querySelector('#site-toc'),
+      tocShowBtn = document.querySelector('#site-toc-show-btn'),
+      tocHideBtn = document.querySelector('#site-toc-hide-btn');
+  
+    tocShowBtn && tocShowBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      layer.style.display = 'block';
+      layerContent.style.display = 'none';
+      toc.style.right = '0';
+       
+      window.AD_CONFIG.layer.add(() => {
+        toc.style.right = '';
+        layer.style.display = 'none';
+        layerContent.style.display = '';
+      });
+    });
+    
+    tocHideBtn && tocHideBtn.addEventListener('click', window.AD_CONFIG.layer.trigger);
+  })();
+  
