@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://huangmiantong.cn/about/index.html</loc>
+    
+    <lastmod>2019-10-31T08:00:03.701Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://huangmiantong.cn/friends/index.html</loc>
     
     <lastmod>2019-10-30T07:34:59.796Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://huangmiantong.cn/passages/wxpay-ui/</loc>
     
     <lastmod>2019-10-30T07:21:45.585Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://huangmiantong.cn/about/index.html</loc>
-    
-    <lastmod>2019-10-30T07:20:40.187Z</lastmod>
     
   </url>
   
